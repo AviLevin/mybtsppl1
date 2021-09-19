@@ -14,7 +14,9 @@ const Employee = (props) => {
                 <span className={classes.name}>{props.location}</span>
                 <span className={classes.icon}>
                   <button
+                  // isVisible={props.isFavorited(props.user)}
                     type="button"
+                    onClick={() => props.onUserFavoriteToggle(props.user)}
                    
                     className={classes.heartButton}
                   >

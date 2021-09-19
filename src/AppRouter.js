@@ -3,7 +3,9 @@ import NavBar from "./components/NavBar/NavBar";
 import EmployeesHK from "./components/EmployeesHK/EmployeesHK";
 import { AppProvider } from "./AppContext";
 import About from "./components/About/About";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import UserListsFavorite from "./components/EmployeesHK/UserListFavorite";
+
 
 function App() {
   return (
@@ -15,12 +17,8 @@ function App() {
           <NavBar />
 
           <Switch>
-            <Route exact path="/">
-              <EmployeesHK />
-            </Route>
-            <Route path="/About">
-              <About />
-            </Route>
+            <Route exact path="/" component={EmployeesHK} />
+            <Route exact path="/favorite" component={UserListsFavorite} />
           </Switch>
         </Router>
      
