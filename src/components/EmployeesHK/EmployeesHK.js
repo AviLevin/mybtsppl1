@@ -68,6 +68,7 @@ const EmployeesHK = ({}) => {
                   pic_url={user.picture.medium}
                   onUserFavoriteToggle={onUserFavoriteToggle}
                   isFavorited={isFavorited}
+                  
                 
                 />
               );
